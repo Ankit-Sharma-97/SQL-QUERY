@@ -1,0 +1,8 @@
+-- extract user name before @ and domain name after @
+-- so we will use charindex and substring fun
+
+SELECT SUBSTRING('ANKIT@GMAIL.COM', 1,CHARINDEX('@',ANKIT@GMAIL.COM)-1);
+
+
+-- extract user name before @ and domain name after @ and ther concatinate domain_name+user_name
+select substring('ankit@gmail.com',charindex('@','ankit@gmail.com')+1,len('ankit@gmail.com')) +' '+ SUBSTRING('ankit@gmail.com',1,CHARINDEX('@','ankit@gmail.com')-1) as new;
